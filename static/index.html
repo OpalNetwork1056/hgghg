@@ -10,7 +10,13 @@
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#434c5e">
     <meta name="googlebot" content="index, follow, snippet" />
     <link href="index.css" rel="stylesheet">
-
+<script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", async () => {
+                await navigator.serviceWorker.register("/sw.js");
+            });
+        }
+        </script>
 
     <script type="application/ld+json">
       {
